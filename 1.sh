@@ -1,2 +1,2 @@
-cat wages.csv | cut -d, -f 1,2 | sort -k 2,2n -n -d | grep -v gender | sed -E 's/,/ /g' | uniq
+cat wages.csv | cut -d, -f 1,2 | sed -E 's/,/ /g' | sort -k1,1d -k2,2n | grep -v gender | uniq
 
